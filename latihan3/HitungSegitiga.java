@@ -5,10 +5,10 @@ public class HitungSegitiga {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Masukkan nilai alas: ");
-        int var_alas = scanner.nextInt();
+        double var_alas = scanner.nextDouble();
 
         System.out.print("Masukkan nilai tinggi: ");
-        int var_tinggi = scanner.nextInt();
+        double var_tinggi = scanner.nextDouble();
 
         double rumus_luas = (var_alas * var_tinggi) / 2.0;
         System.out.println("Luas Segitiga: " + rumus_luas);
