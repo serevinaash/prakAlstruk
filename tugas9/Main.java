@@ -17,24 +17,15 @@ public class Main {
             namaMahasiswa[i] = scanner.nextLine();
         }
 
-        // Mengurutkan nama-nama mahasiswa
-        Arrays.sort(namaMahasiswa);
-
-        // Menampilkan nama-nama mahasiswa yang telah diurutkan
-        System.out.println("Nama-nama mahasiswa setelah diurutkan:");
-        for (String nama : namaMahasiswa) {
-            System.out.println(nama);
-        }
-
         // Input nama yang akan dicari
         System.out.print("Masukkan nama yang ingin dicari: ");
         String namaCari = scanner.nextLine();
 
-        // Mencari nama mahasiswa
+        // Mencari nama mahasiswa menggunakan linear search
         boolean ditemukan = false;
-        for (String nama : namaMahasiswa) {
-            if (nama.equalsIgnoreCase(namaCari)) {
-                System.out.println("Nama " + namaCari + " ditemukan dalam daftar mahasiswa.");
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            if (namaMahasiswa[i].equalsIgnoreCase(namaCari)) {
+                System.out.println("Indeks ke - " + i + " Nama " + namaCari + " ditemukan dalam daftar mahasiswa.");
                 ditemukan = true;
                 break;
             }
